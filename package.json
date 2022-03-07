@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,27 @@
   "bugs": {
     "url": "https://github.com/debhash/zmart-check-delivery-failure/issues"
   },
-  "homepage": "https://github.com/debhash/zmart-check-delivery-failure#readme"
+  "homepage": "https://github.com/debhash/zmart-check-delivery-failure#readme",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "connect-sqlite3": "^0.9.13",
+    "cookie-parser": "~1.4.4",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "dotenv": "^8.6.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "http-errors": "~1.6.3",
+    "mkdirp": "^1.0.4",
+    "morgan": "~1.9.1",
+    "node-cron": "^3.0.0",
+    "node-fetch": "2.6.1",
+    "node-gmail-api": "^1.0.1",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-oauth2-refresh": "^2.1.0",
+    "pluralize": "^8.0.0",
+    "sqlite3": "^5.0.2"
+  }
 }
