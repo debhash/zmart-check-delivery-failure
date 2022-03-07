@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Check Delivery Failure Email</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <section class="todoapp">
+      <nav class="nav">
+        <ul>
+          <li>
+            <form action="/logout" method="post">
+              <button class="logout" type="submit">Sign out</button>
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <h1>Check Delivery Failure Email</h1>
+      </header>
+      <% if (emailExtractedCount > 0) { %>
+      <section class="main">
+        <ul class="todo-list">
+          <% emailExtracted.forEach(function(email) { %>
+          <li class="completed">
+            <form>
+              <div class="view"><%= email.email %> / <%= email.date %></div>
+            </form>
+          </li>
+          <% }); %>
+        </ul>
+      </section>
+      <% } %>
+    </section>
+  </body>
+</html>
